@@ -1,9 +1,16 @@
 [
   {
-    "id": "nyaa.latino.ajolote",
     "name": "Nyaa Latino",
-    "description": "Anime en español latino vía Nyaa.si",
+    "id": "hayase.extension.nyaa.latino",
     "version": "1.0.0",
-    "entry": "extension.js"
+    "type": "torrent",
+    "accuracy": "medium",
+    "ratio": 0,
+    "media": "sub",
+    "languages": ["ES"],
+    "description": "Anime en español latino vía Nyaa.si",
+    "icon": "https://nyaa.si/static/favicon.png",
+    "update": "https://raw.githubusercontent.com/Pedroj-64/Extension-hayase/main/index.json",
+    "code": "https://raw.githubusercontent.com/Pedroj-64/Extension-hayase/main/extension.js"
   }
 ]
