@@ -1,0 +1,10 @@
+{
+  "name": "Nyaa Latino",
+  "id": "nyaa.latino.ajolote",
+  "version": "1.0.0",
+  "description": "Anime en español latino vía Nyaa.si",
+  "author": "Ajolote",
+  "language": "es",
+  "type": "js",
+  "entry": "extension.js"
+}
