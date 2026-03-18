@@ -1,11 +1,9 @@
-{
-  "extensions": [
-    {
-      "name": "Nyaa Latino",
-      "id": "nyaa.latino.ajolote",
-      "version": "1.0.0",
-      "description": "Anime en español latino vía Nyaa.si",
-      "manifest": "manifest.json"
-    }
-  ]
-}
+[
+  {
+    "id": "nyaa.latino.ajolote",
+    "name": "Nyaa Latino",
+    "description": "Anime en español latino vía Nyaa.si",
+    "version": "1.0.0",
+    "entry": "extension.js"
+  }
+]
