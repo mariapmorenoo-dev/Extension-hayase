@@ -1,0 +1,16 @@
+[
+  {
+    "name": "AnimeOnline CLEAN STREAMING",
+    "id": "hayase.extension.animeonline.clean",
+    "version": "1.0.0",
+    "type": "streaming",
+    "accuracy": "medium",
+    "ratio": 0,
+    "media": "dub",
+    "languages": ["ES"],
+    "description": "CLEAN - Sin campos torrent, solo streaming puro",
+    "icon": "https://ver.animeonline.ninja/favicon.ico",
+    "update": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/index_clean.json",
+    "code": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/extension_clean.js"
+  }
+]

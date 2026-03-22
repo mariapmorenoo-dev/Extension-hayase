@@ -1,0 +1,16 @@
+[
+  {
+    "name": "AnimeOnline SIMPLE STREAM",
+    "id": "hayase.extension.animeonline.simple.stream",
+    "version": "1.0.0",
+    "type": "streaming",
+    "accuracy": "medium",
+    "ratio": 0,
+    "media": "dub",
+    "languages": ["ES"],
+    "description": "SIMPLE - Campos mínimos, solo title + link + date + type",
+    "icon": "https://ver.animeonline.ninja/favicon.ico",
+    "update": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/index_simple_stream.json",
+    "code": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/extension_simple_stream.js"
+  }
+]
