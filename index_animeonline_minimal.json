@@ -1,0 +1,16 @@
+[
+  {
+    "name": "AnimeOnline.Ninja MINIMAL TEST",
+    "id": "hayase.extension.animeonline.minimal",
+    "version": "1.0.0",
+    "type": "streaming",
+    "accuracy": "high",
+    "ratio": 0,
+    "media": "dub",
+    "languages": ["ES"],
+    "description": "MINIMAL TEST - Anime español latino test básico",
+    "icon": "https://ver.animeonline.ninja/favicon.ico",
+    "update": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/index_animeonline_minimal.json",
+    "code": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/extension_animeonline_minimal.js"
+  }
+]
