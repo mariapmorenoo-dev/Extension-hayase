@@ -1,6 +1,6 @@
 [
   {
-    "name": "AnimeOnline Instance",
+    "name": "AnimeOnline Instance DEBUG",
     "id": "hayase.extension.animeonline.instance",
     "version": "1.0.0",
     "type": "torrent",
@@ -8,7 +8,7 @@
     "ratio": 0,
     "media": "dub",
     "languages": ["ES"],
-    "description": "Anime en español latino vía AnimeOnline.ninja",
+    "description": "DEBUG - Anime en español latino con resultados garantizados",
     "icon": "https://ver.animeonline.ninja/favicon.ico",
     "update": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/index_instance.json",
     "code": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/extension_instance.js"
