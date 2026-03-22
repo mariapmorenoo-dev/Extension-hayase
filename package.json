@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "name": "hayase-animeonline-extension",
+  "version": "1.0.0",
+  "description": "Hayase extension for AnimeOnline.ninja streaming"
+}

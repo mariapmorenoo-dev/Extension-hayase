@@ -1,0 +1,16 @@
+[
+  {
+    "name": "AnimeOnline.Ninja Latino",
+    "id": "hayase.extension.animeonline.latino",
+    "version": "1.0.0",
+    "type": "streaming",
+    "accuracy": "high",
+    "ratio": 0,
+    "media": "dub",
+    "languages": ["ES"],
+    "description": "Anime doblado en español latino vía AnimeOnline.Ninja",
+    "icon": "https://ver.animeonline.ninja/favicon.ico",
+    "update": "https://raw.githubusercontent.com/Pedroj-64/Extension-hayase/main/index_animeonline.json",
+    "code": "https://raw.githubusercontent.com/Pedroj-64/Extension-hayase/main/extension_animeonline.js"
+  }
+]

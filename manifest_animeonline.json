@@ -1,0 +1,12 @@
+[
+  {
+    "name": "AnimeOnline.Ninja Latino",
+    "id": "animeonline.latino.extension",
+    "version": "1.0.0",
+    "description": "Streaming de anime doblado al español latino",
+    "author": "Ajolote",
+    "language": "es",
+    "type": "js",
+    "entry": "https://raw.githubusercontent.com/Pedroj-64/Extension-hayase/main/extension_animeonline.js"
+  }
+]
