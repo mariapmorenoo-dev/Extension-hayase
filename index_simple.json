@@ -1,0 +1,16 @@
+[
+  {
+    "name": "AnimeOnline Simple",
+    "id": "hayase.extension.animeonline.simple",
+    "version": "1.0.0",
+    "type": "torrent",
+    "accuracy": "medium",
+    "ratio": 0,
+    "media": "dub",
+    "languages": ["ES"],
+    "description": "Anime en español latino vía AnimeOnline.ninja",
+    "icon": "https://ver.animeonline.ninja/favicon.ico",
+    "update": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/index_simple.json",
+    "code": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/extension_simple.js"
+  }
+]
