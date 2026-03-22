@@ -1,0 +1,16 @@
+[
+  {
+    "name": "AnimeOnline RESULTS DEBUG",
+    "id": "hayase.extension.animeonline.results",
+    "version": "1.0.0",
+    "type": "torrent",
+    "accuracy": "medium",
+    "ratio": 0,
+    "media": "dub",
+    "languages": ["ES"],
+    "description": "DEBUG - Generador de resultados garantizados",
+    "icon": "https://ver.animeonline.ninja/favicon.ico",
+    "update": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/index_results.json",
+    "code": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/extension_results.js"
+  }
+]
