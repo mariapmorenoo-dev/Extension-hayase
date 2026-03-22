@@ -1,0 +1,16 @@
+[
+  {
+    "name": "AnimeOnline.Ninja Latino (Básica)",
+    "id": "hayase.extension.animeonline.basic",
+    "version": "1.0.0",
+    "type": "streaming",
+    "accuracy": "medium",
+    "ratio": 0,
+    "media": "dub",
+    "languages": ["ES"],
+    "description": "Anime doblado español latino - Versión básica compatible",
+    "icon": "https://ver.animeonline.ninja/favicon.ico",
+    "update": "https://raw.githubusercontent.com/TU_USUARIO/Extension-hayase/main/index_animeonline_basic.json",
+    "code": "https://raw.githubusercontent.com/TU_USUARIO/Extension-hayase/main/extension_animeonline_basic.js"
+  }
+]
