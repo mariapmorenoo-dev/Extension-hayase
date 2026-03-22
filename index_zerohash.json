@@ -1,0 +1,16 @@
+[
+  {
+    "name": "AnimeOnline ZERO HASH",
+    "id": "hayase.extension.animeonline.zerohash",
+    "version": "1.0.0",
+    "type": "torrent",
+    "accuracy": "medium",
+    "ratio": 0,
+    "media": "dub",
+    "languages": ["ES"],
+    "description": "Hash de ceros + 0 seeders para evitar descarga",
+    "icon": "https://ver.animeonline.ninja/favicon.ico",
+    "update": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/index_zerohash.json",
+    "code": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/extension_zerohash.js"
+  }
+]

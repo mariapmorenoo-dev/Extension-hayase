@@ -1,0 +1,16 @@
+[
+  {
+    "name": "AnimeOnline REQUIRED FIELDS",
+    "id": "hayase.extension.animeonline.required",
+    "version": "1.0.0",
+    "type": "torrent",
+    "accuracy": "medium",
+    "ratio": 0,
+    "media": "dub",
+    "languages": ["ES"],
+    "description": "Con TODOS los campos requeridos como Nyaa",
+    "icon": "https://ver.animeonline.ninja/favicon.ico",
+    "update": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/index_required.json",
+    "code": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/extension_required.js"
+  }
+]
