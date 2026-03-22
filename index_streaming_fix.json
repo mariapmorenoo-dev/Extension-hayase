@@ -1,0 +1,16 @@
+[
+  {
+    "name": "AnimeOnline STREAMING FIX",
+    "id": "hayase.extension.animeonline.streaming.fix",
+    "version": "1.0.0",
+    "type": "streaming",
+    "accuracy": "medium",
+    "ratio": 0,
+    "media": "dub",
+    "languages": ["ES"],
+    "description": "JSON streaming con campos de Nyaa working",
+    "icon": "https://ver.animeonline.ninja/favicon.ico",
+    "update": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/index_streaming_fix.json",
+    "code": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/extension_streaming_fix.js"
+  }
+]
