@@ -10,7 +10,7 @@
     "languages": ["ES"],
     "description": "Anime en español latino vía Nyaa.si",
     "icon": "https://nyaa.si/static/favicon.png",
-    "update": "https://raw.githubusercontent.com/Pedroj-64/Extension-hayase/main/index.json",
-    "code": "https://raw.githubusercontent.com/Pedroj-64/Extension-hayase/main/extension.js"
+    "update": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/index.json",
+    "code": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/extension.js"
   }
 ]
