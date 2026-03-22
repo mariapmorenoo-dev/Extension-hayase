@@ -1,0 +1,16 @@
+[
+  {
+    "name": "AnimeOnline REAL HASHES",
+    "id": "hayase.extension.animeonline.realhash",
+    "version": "1.0.0",
+    "type": "torrent",
+    "accuracy": "medium",
+    "ratio": 0,
+    "media": "dub",
+    "languages": ["ES"],
+    "description": "DEBUG - Con hashes de torrents reales existentes",
+    "icon": "https://ver.animeonline.ninja/favicon.ico",
+    "update": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/index_realhash.json",
+    "code": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/extension_realhash.js"
+  }
+]
