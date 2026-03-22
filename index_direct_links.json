@@ -1,0 +1,16 @@
+[
+  {
+    "name": "AnimeOnline DIRECT LINKS",
+    "id": "hayase.extension.animeonline.directlinks",
+    "version": "1.0.0",
+    "type": "torrent",
+    "accuracy": "high",
+    "ratio": 0,
+    "media": "dub",
+    "languages": ["ES"],
+    "description": "Enlaces directos reales a Nyaa, Mega, Drive, etc",
+    "icon": "https://ver.animeonline.ninja/favicon.ico",
+    "update": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/index_direct_links.json",
+    "code": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/extension_direct_links.js"
+  }
+]

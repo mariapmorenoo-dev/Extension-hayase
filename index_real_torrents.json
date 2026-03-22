@@ -1,0 +1,16 @@
+[
+  {
+    "name": "AnimeOnline REAL TORRENTS",
+    "id": "hayase.extension.animeonline.realtorrents",
+    "version": "1.0.0",
+    "type": "torrent",
+    "accuracy": "high",
+    "ratio": 0,
+    "media": "dub",
+    "languages": ["ES"],
+    "description": "REAL - Extrae torrents reales de AnimOnline.ninja",
+    "icon": "https://ver.animeonline.ninja/favicon.ico",
+    "update": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/index_real_torrents.json",
+    "code": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/extension_real_torrents.js"
+  }
+]
