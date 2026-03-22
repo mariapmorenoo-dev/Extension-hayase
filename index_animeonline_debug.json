@@ -1,0 +1,16 @@
+[
+  {
+    "name": "AnimeOnline.Ninja DEBUG",
+    "id": "hayase.extension.animeonline.debug",
+    "version": "1.0.0",
+    "type": "streaming",
+    "accuracy": "high",
+    "ratio": 0,
+    "media": "dub",
+    "languages": ["ES"],
+    "description": "DEBUG - Anime doblado español latino con logging",
+    "icon": "https://ver.animeonline.ninja/favicon.ico",
+    "update": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/index_animeonline_debug.json",
+    "code": "https://raw.githubusercontent.com/mariapmorenoo-dev/Extension-hayase/main/extension_animeonline_debug.js"
+  }
+]
