@@ -7,7 +7,7 @@ export default class AnimeOnlineNinja {
   async getBrowser() {
     if (!this.browserInstance) {
       this.browserInstance = await chromium.launch({
-        headless: true,
+        headless: false, // Cambiado a false para ver qué pasa
         args: [
           '--no-sandbox',
           '--disable-setuid-sandbox',
@@ -24,7 +24,10 @@ export default class AnimeOnlineNinja {
           '--ignore-certificate-errors',
           '--ignore-ssl-errors',
           '--ignore-certificate-errors-spki-list',
-          '--memory-pressure-off'
+          '--memory-pressure-off',
+          '--disable-blink-features=AutomationControlled',
+          '--exclude-switches=enable-automation',
+          '--disable-dev-tools'
         ]
       })
     }
@@ -579,74 +582,134 @@ export default class AnimeOnlineNinja {
           'Cache-Control': 'max-age=0',
           'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"',
           'sec-ch-ua-mobile': '?0',
-          'sec-ch-ua-platform': '"Windows"'
+          'sec-ch-ua-platform': '"Windows"',
+          'DNT': '1',
+          'Connection': 'keep-alive',
+          'Upgrade-Insecure-Requests': '1'
         }
       })
 
       const page = await context.newPage()
 
-      // Intentar diferentes estrategias de navegación
-      const strategies = [
-        { url: this.base, timeout: 10000, waitUntil: 'load' },
-        { url: this.base, timeout: 8000, waitUntil: 'domcontentloaded' },
-        { url: `${this.base}/search`, timeout: 6000, waitUntil: 'load' }
-      ]
+      // Script anti-detección más agresivo
+      await page.addInitScript(() => {
+        // Ocultar webdriver
+        Object.defineProperty(navigator, 'webdriver', {
+          get: () => undefined,
+        })
 
+        // Eliminar propiedades de automatización
+        delete navigator.__proto__.webdriver
+
+        // Simular plugins del navegador real
+        Object.defineProperty(navigator, 'plugins', {
+          get: () => {
+            return Array.from({ length: 5 }, (_, i) => ({
+              name: `Plugin ${i}`,
+              description: `Description ${i}`,
+              filename: `plugin${i}.dll`,
+              length: Math.floor(Math.random() * 10)
+            }))
+          },
+        })
+
+        // Configurar idiomas
+        Object.defineProperty(navigator, 'languages', {
+          get: () => ['es-ES', 'es', 'en-US', 'en'],
+        })
+
+        // Configurar permisos
+        const originalQuery = window.navigator.permissions.query
+        window.navigator.permissions.query = (parameters) => (
+          parameters.name === 'notifications' ?
+            Promise.resolve({ state: Notification.permission }) :
+            originalQuery(parameters)
+        )
+
+        // Simular hardware
+        Object.defineProperty(navigator, 'hardwareConcurrency', {
+          get: () => 4,
+        })
+
+        Object.defineProperty(navigator, 'deviceMemory', {
+          get: () => 8,
+        })
+
+        // Eliminar rastros de automatización
+        ['__driver_evaluate', '__webdriver_evaluate', '__selenium_evaluate', '__fxdriver_evaluate', '__driver_unwrapped', '__webdriver_unwrapped', '__selenium_unwrapped', '__fxdriver_unwrapped', '_Selenium_IDE_Recorder', '_selenium', 'calledSelenium', '__$webdriverAsyncExecutor', '__lastWatirAlert', '__lastWatirConfirm', '__lastWatirPrompt', '$cdc_asdjflasutopfhvcZLmcfl_', '$chrome_asyncScriptInfo'].forEach(prop => {
+          delete window[prop]
+        })
+      })
+
+      console.log('🚀 Attempting advanced Cloudflare bypass...')
+
+      // Estrategia de múltiples intentos
       let success = false
-      let lastError = null
+      const maxAttempts = 3
 
-      for (const strategy of strategies) {
+      for (let attempt = 1; attempt <= maxAttempts; attempt++) {
         try {
-          console.log(`Trying strategy: ${strategy.url} with ${strategy.waitUntil}`)
+          console.log(`  Attempt ${attempt}/${maxAttempts}`)
 
-          await page.goto(strategy.url, {
-            waitUntil: strategy.waitUntil,
-            timeout: strategy.timeout
+          await page.goto(`${this.base}/`, {
+            waitUntil: 'load',
+            timeout: 15000
           })
 
-          // Esperar un poco para que se procese cualquier JavaScript
-          await page.waitForTimeout(2000)
+          // Esperar progresivamente más tiempo en cada intento
+          const waitTime = 5000 + (attempt * 3000)
+          console.log(`  Waiting ${waitTime/1000}s for challenge resolution...`)
+          await page.waitForTimeout(waitTime)
 
-          // Verificar que la página se cargó correctamente
-          const pageContent = await page.content()
+          // Intentar interacción humana simulada
+          await page.mouse.move(100 + Math.random() * 200, 100 + Math.random() * 200)
+          await page.waitForTimeout(500)
+          await page.mouse.move(300 + Math.random() * 200, 200 + Math.random() * 200)
+
+          // Verificar el estado de la página
           const title = await page.title()
+          const url = await page.url()
+          const content = await page.content()
 
-          console.log(`Page title: "${title}"`)
-          console.log(`Content length: ${pageContent.length}`)
+          console.log(`  Page title: "${title}"`)
+          console.log(`  Current URL: ${url}`)
+          console.log(`  Content length: ${content.length}`)
 
-          // Verificaciones de éxito
-          const isCloudflareChallenge = pageContent.includes('Just a moment') || pageContent.includes('Please wait') || title.includes('Just a moment')
-          const hasContent = pageContent.length > 5000
-          const hasExpectedElements = pageContent.includes('anime') || pageContent.includes('search') || pageContent.includes('video')
+          // Verificaciones más específicas
+          const isCloudflareChallenge = title.includes('Just a moment') || title.includes('Un momento') || title.includes('Please wait') || content.includes('DDoS protection')
+          const hasRealContent = content.length > 50000 // Página real debe ser más grande
+          const hasAnimeContent = content.includes('anime') || content.includes('episodio') || content.includes('temporada')
+          const hasNavigation = content.includes('nav') || content.includes('menu')
 
-          if (!isCloudflareChallenge && hasContent && hasExpectedElements) {
-            console.log('✅ Site is accessible!')
+          if (!isCloudflareChallenge && (hasRealContent || hasAnimeContent || hasNavigation)) {
+            console.log('✅ Challenge bypassed successfully!')
             success = true
             break
           } else {
-            console.log('❌ Site not fully accessible yet...')
-            if (isCloudflareChallenge) console.log('  - Cloudflare challenge detected')
-            if (!hasContent) console.log('  - Low content length')
-            if (!hasExpectedElements) console.log('  - Missing expected elements')
+            console.log(`  ❌ Still in challenge page (attempt ${attempt})`)
+            if (isCloudflareChallenge) console.log('    - Cloudflare challenge detected')
+            if (!hasRealContent) console.log('    - Content too small')
+            if (!hasAnimeContent && !hasNavigation) console.log('    - No anime/navigation content')
+
+            if (attempt < maxAttempts) {
+              console.log('  🔄 Retrying...')
+              await page.waitForTimeout(2000)
+            }
           }
 
         } catch (error) {
-          console.log(`Strategy failed: ${error.message}`)
-          lastError = error
-          continue
+          console.log(`  ❌ Attempt ${attempt} failed: ${error.message}`)
+          if (attempt === maxAttempts) {
+            throw error
+          }
         }
       }
 
       await context.close()
-
-      if (!success && lastError) {
-        throw lastError
-      }
-
       return success
 
     } catch (error) {
-      console.error('All connectivity strategies failed:', error.message)
+      console.error('Cloudflare bypass failed:', error.message)
       return false
     }
   }
